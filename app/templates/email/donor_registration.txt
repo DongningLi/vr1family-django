@@ -1,0 +1,11 @@
+Dear {{ name }}.
+
+Thanks for trusting VR1Family as your charity partner.
+
+We'd like to inform you that we've received your details and your Donor profile has successfully been recorded in our system.
+For future reference, please note your Donor ID below.
+
+Your Donor ID is {{ donor_id }}.
+
+Thank you,
+VR1Family

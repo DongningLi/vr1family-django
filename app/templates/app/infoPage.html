@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+       <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Information</title>
+
+    <style>
+      .logoimage{
+        display: flex;
+        justify-content: center;
+      }
+
+      img{
+        margin-left: 3%;
+        margin-top: 10%;
+        width: 50%;
+      }
+
+    </style>
+
+    </head>
+    <body>
+
+        <div class="container">
+
+          <!--Django Model-->
+          <h2 class="my-4">VR1Family Services</h2>
+          <div class="row">
+            {% for m in information %}
+              <div class="card h-100 p-4">
+                <h4>{{m.title}}</h4>
+                {{m.content|safe}}
+              </div>
+            {% empty %}
+            <p>No Information added.</p>
+            {% endfor %}
+          </div>
+
+          <div class="logoimage">
+            {% load static %}
+            <a href="https://www.facebook.com/profile.php?id=100092616825509&is_tour_dismissed=true">
+              <img src="{% static "/fb_logo.png" %}" alt="fb" />
+            </a>
+            <a href="https://www.instagram.com/wearevr1family/">
+              <img src="{% static "/ins_logo.png" %}" alt="ig" />
+            </a>
+          </div>
+
+        </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>

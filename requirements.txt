@@ -1,0 +1,7 @@
+Django==4.2
+django-crispy-forms
+crispy-bootstrap4
+Pillow
+django-tinymce
+gunicorn
+psycopg[binary,pool]
